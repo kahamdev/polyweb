@@ -1,0 +1,39 @@
+{% extends 'base/main.html' %}
+
+{% load static %}
+
+{% block title %} nursing {% endblock %}
+
+
+{% block content %}
+<style>
+   img.nurse-content-img{
+      width:50%;
+    }
+    @media screen and (max-width:768px) {
+       img.nurse-content-img{
+        width:100%;
+        margin:5px;
+       }
+    }
+    @media screen and (max-width:400px) {
+      img.nurse-content-img{
+        width:90%;
+    }
+   }
+</style>
+   <div class="container mb-3">
+     <h1 style="color:#115173; padding-top:20px; border-bottom:2px solid #115173;"> HOME BASED NURSING SERVICES</h1>
+     <p style="font-family:sans-serif; font-weight:bold;"> Nurses provides multidimensional home care to patients of all ages including</p>
+        <p style="font-family:sans-serif;">1.Head to toe physical assessment.<p>
+        <p style="font-family:sans-serif;">2.Providing dietary education</p>
+        <p style="font-family:sans-serif;">3.Help you manage your medication and vital signs</p>
+      <p style="font-family:sans-serif;">4.Wound care such as dressing changes and care for complex non healing wounds.</p>
+      <p style="font-family:sans-serif;">5.Administering and maintaining catheters.</p>
+      <p style="font-family:sans-serif;">6.Administering and managing NGTs(Nasogastric Tube)</p>
+      <p style="font-family:sans-serif;">7.Others nursing services</p>
+      <img class="nurse-content-img" src="{% static 'images/image/NS.png' %}" style="height:400px;" alt="image"/>
+      <br>
+      <br>
+   </div>
+{% endblock content %}

@@ -1,0 +1,63 @@
+{% extends 'base/main.html' %}
+
+{% load static %}
+
+{% block title %} Contact {% endblock %}
+
+{% block content %}
+  <style>
+    .getframe{
+      width:1100px;
+      height:450px;
+    }
+    @media screen and (max-width:768px) {
+      .getframe{
+         width:400px;
+         padding:10px;
+
+      }
+    }
+      @media screen and (max-width:400px) {
+        .getframe{
+           width:350px;
+           padding:10px;
+  
+        }
+    }
+  </style>
+   <div class="container">
+        <div class="contact-content">
+             <div class="container">
+               <div class="left-contact-content">
+                  <h1 style="color:#115173;  border-bottom:2px solid #115173;  " class="mt-3 p-1 ">OUR LOCATION</h1>
+                  <iframe class="getframe"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.6579820534344!2d35.74321721488667!3d-6.176519662243799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184de55eb26ebef1%3A0x146146cdd4b6d492!2sMadukani%20Ward%20Office!5e0!3m2!1sen!2stz!4v1676642919547!5m2!1sen!2stz"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+                </div> 
+             </div>
+
+            
+             <div class="right-contact-content">
+              
+               <div class="container">
+                  <h1 style="color:#115173;  border-bottom:2px solid #115173;" class="mt-3 p-1">OUR CONTACTS</h1>
+                  {% if contact %}
+                    {% for cnt in contact %}
+                    <p style="font-size:20px; font-style:italic; font-family:sans-serif  "  class="mt-3 p-1">Email Address:{{ cnt.email }}</p>
+                    <p style="font-size:20px; font-style:italic; font-family:sans-serif  "  class="mt-3 p-1">Phone number: {{ cnt.phone }}</p>
+                    {% endfor %}
+                    {% else %}
+                   <p style="font-size:20px; font-style:italic; font-family:sans-serif  "  class="mt-3 p-1">Email Address: medicsphysio94@gmail.com </p>
+                   <p style="font-size:20px; font-style:italic; font-family:sans-serif  " class="mt-3 p-1">Email Address: mamumedics94@gmail.com</p>
+                   <p style="font-size:20px; font-style:italic; font-family:sans-serif  " class="mt-3 p-1">Phone number: +255714149094</p>
+                   <p style="font-size:20px; font-style:italic; font-family:sans-serif  "  class="mt-3 p-1">Phone number: +255759379094</p>
+                   <p style="font-size:20px; font-style:italic; font-family:sans-serif  "  class="mt-3 p-1">Phone number: +255684138394</p>
+                  {% endif %}
+                  
+                   
+               </div>
+             </div>   
+        </div>
+
+   </div>
+ 
+   
+{% endblock content %}

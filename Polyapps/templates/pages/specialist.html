@@ -1,0 +1,67 @@
+{% extends 'base/main.html' %}
+
+{% load static %}
+
+{% block title %} Specialists {% endblock %}
+
+{% block content %}
+<style>
+   .specialist{
+      background-color:#cccc;
+      height:200px;
+      padding:20px;
+      margin:10px;
+      color:#115733;
+   }
+</style>
+<div class="container">
+   <div class="specialist-content">
+        <h1 style="color:#115173; padding-top:20px;  border-bottom:2px solid #115173;">Our specialists</h1>
+        <table class="table table-striped table-bordered table-hovered">
+              <theader>
+                 <tr>
+                     <th>Doctor name</th>
+                     <th>Position</th>
+                     <th>Phone</th>
+                     <th>Email</th>
+                     <th>Time</th>
+                 </tr>
+              </theader>
+              <tbody>
+                  {% if specialist %}
+                     {% for spec in specialist %}
+                     <tr>
+                        <td>{{ spec.name }}</td>
+                        <td>{{ spec.position }}</td>
+                        <td>{{ spec.phone }}</td>
+                        <td>{{ spec.email }}</td>
+                        <td>{{ spec.time }}</td>
+                     </tr>
+                     {% endfor %}
+                  {% else %}
+                  <div class="inpatient-content">
+                     <div class="specialist">   
+                     <h1>The specialists not added</h1>
+                     </div>  
+                  {% endif %}
+              </tbody>
+        </table>
+        <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+   </div>
+</div>
+{% endblock content %}

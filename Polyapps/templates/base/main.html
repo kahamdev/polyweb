@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="title" content="Welcome to MAMU MEDICS & PHYSIOTHERAPY">
+  <meta name="description" content=" MAMU MEDICS & PHYSIOTHERAPY CO.LTD office is located at in Dodoma,MAMU MEDICS AND PHYSIOTHERAPY COMPANY
+  that was founded in June 2022 as a company that deals with all medical Services
+  including provision of health care facility and its related business">
+  <meta name="keywords" content="mamu,mamumedics,physiotherapy,mamumedicsandphysiotherapy, physiotherapy specialists,mamu specialists, physiotherapist specialties,mamumedics-physiotherapy,mamumedics&physiotherapy" />
+  <meta property="og:url" content="https://www.mamumedicsandphysiotherapy.or.tz/" >
+  <meta property="og:site_name" content="MAMU MEDICS & PHYSIOTHERAPY" />
+  <meta property="og:title"  content="What is Physiotherapy?" />
+  <meta name="MobileOptimized" content="width" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="author" content="MainPage">
+  <link rel="icon" href="{% static './favicon/favicon.png' %}">
+  <title>{% block title %} {% endblock %}</title>
+  <link href="{% static './bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static './stylesheet/mystyle.css' %}">
+</head>
+
+<body>
+
+   {% include 'base/navbar.html' %}
+
+   {% block content %}
+
+   {% endblock content %}
+   
+   {% include 'base/footer.html' %}
+   
+
+  <script src="{% static './jquery/jquery.min.js' %}"></script>
+  <script src="{% static './bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" 
+crossorigin="anonymous"></script>
+
+</body>
+
+</html>

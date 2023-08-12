@@ -1,0 +1,52 @@
+{% load static %}
+<style>
+     @media screen and (max-width:400px) {
+          .middle-header span{
+              font-size: 16px;
+          }
+          .nav-top-header ul li{
+               font-size: 14px;
+          }
+      }
+</style>
+<header>
+     <div class="top-header">
+          <div class="content">
+               <div class="row">
+                    <div class="col-md-12">
+                         <div class="nav-top-header">
+                               <ul>
+                                   <li>WORKING HOURS 8:00 AM - 08:00 PM &ensp;/</li>
+                                   <li>MON - SAT&ensp;</li>
+                               </ul>
+                         </div>
+                    </div> 
+               </div>
+          </div>
+     </div>
+     
+     <div class="middle-header">
+          <span><img width="50" height="50" alt="logo" src="/static/images/background/polyclinic-logo.png"/>MAMU MEDICS & PHYSIOTHERAPY</span>
+     </div>
+     
+     <div class="bottom-header">
+          <nav class="navbar navbar-expand-lg navbar-light text-white">
+               <div class="container-fluid">
+               
+                 <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                 </button>
+                 <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+                   <div class="navbar-nav ms-auto">
+                     <a class="nav-link active text-white" aria-current="page" href="{% url 'homepage' %}">Home</a>
+                     <a class="nav-link text-white" href="{% url 'aboutpage' %}">About</a>
+                     <a class="nav-link text-white" href="{% url 'contactpage' %}">Contact</a>
+                     <a class="nav-link text-white" href="{% url 'specialistpage' %}">Specialists</a>
+                     <a class="nav-link text-white" href="{% url 'servicespage' %}">Services</a>
+                     <a class="nav-link text-white" href="http://127.0.0.1:8000/admin/login/?next=/admin/">Staff login</a>
+                   </div>
+                 </div>
+               </div>
+             </nav>
+     </div>
+</header>

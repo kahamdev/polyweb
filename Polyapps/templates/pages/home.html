@@ -1,0 +1,154 @@
+{% extends 'base/main.html' %}
+
+ {% load static %}
+
+ {% block title %} Home {% endblock %}
+
+ {% block content %}
+ <style>
+  @media screen and (max-width:768px) {
+     .service1-title a{
+      margin:10px;
+    }
+     .service2-title a{
+      margin:10px;
+    }
+     .service3-title a{
+      margin:10px;
+    }
+     .service4-title a{
+      margin:10px;
+     }
+     .service1-img img{
+      margin:10px;
+      width:400px;
+      height:200px;
+     }
+     .service2-img img{
+      margin:10px;
+      width:400px;
+      height:200px;
+     }
+     .service3-img img{
+      margin:10px;
+      width:400px;
+      height:200px;
+     }
+     .service4-img img{
+      margin:10px;
+      width:400px;
+      height:200px;
+     }
+     .home-contents-left h1{
+       font-size:18px;
+     }
+  }
+
+  @media screen and (max-width:400px) {
+    .service1-img img{
+      width:300px;
+     }
+     .service2-img img{
+      width:300px;
+     }
+     .service3-img img{
+      width:300px;
+     }
+     .service4-img img{
+      width:300px;
+     }
+     .home-contents-left h1{
+      font-size:14px;
+    }
+  }
+ </style>
+     <div class="home-contents">
+          <div class="home-contents-left">
+                <h1 class="mb-3">WELCOME TO MAMU MEDICS & PHYSIOTHERAPY</h1>
+                <p style="font-family:sans-serif;">The demand for health related matters 
+                  have drastically increased and demand for home based patient care especially for patients with
+                  special needs like elderly or those with chronic illness or recovering from surgery whom have
+                  difficulties with accessing hospital services 
+                  and for severe patients whom transfer is a problem and cost full to send them to hospital&ensp;<a style="color:#115173;" href="{% url 'aboutpage' %}">more details >></a> </p>
+          </div>
+          <div class="home-contents-right">         
+                    <img src="{% static 'images/background/doctor2.jpg' %}" alt="image"/>     
+          </div>
+      </div>
+
+     <div class="benefits-container pt-3">
+      <div class="container">
+           <h4 class="py-2" style="background-color:#115173; padding:5px;color:white;">Services</h4>
+           <div class="benefits-items">
+                <div class="benefits-list1">
+                   <div class="service1">
+                    <div class="service1-title">
+                      <a  href="{% url 'inpatientpage' %}" style="text-decoration:none; color:white;"><span style="font-size:25px;">Inpatient</span></a>  
+                     </div>
+                     <div class="service1-img">
+                      <img class="service1-image" style="padding:10px; border:2px solid white;" src="{% static 'images/background/doctor2.jpg' %}" alt="inpatient-image" width="200"/>
+                     </div>
+                   </div>
+                </div>
+                <div class="benefits-list2">
+                  <div class="service2">
+                    <div class="service2-title">
+                      <a  href="{% url 'outpatientpage' %}" style="text-decoration:none; color:white;"><span style="font-size:25px;">Outpatient</span></a>  
+                     </div>
+                     <div class="service2-img">
+                      <img style="padding:10px; border:2px solid white;" src="{% static 'images/background/msk.png' %}" alt="outpatient-image" width="200" height="140"/>
+                     </div>
+                   </div>
+                </div>
+                <div class="benefits-list3">
+                  <div class="service3">
+                    <div class="service3-title">
+                      <a  href="{% url 'therapypage' %}" style="text-decoration:none; color:white;"><span style="font-size:25px;">Home based therapy</span></a>  
+                     </div>
+                     <div class="service3-img">
+                      <img style="padding:10px; border:2px solid white;" src="{% static 'images/background/HBC2.png' %}" alt="therapy-image" width="180"/>
+                     </div>
+                   </div>
+                </div>
+                <div class="benefits-list4">
+                  <div class="service4">
+                    <div class="service4-title">
+                      <a  href="{% url 'nursepage' %}" style="text-decoration:none; color:white;"><span style="font-size:25px;">Home based nursing</span></a>  
+                     </div>
+                     <div class="service4-img">
+                      <img style="padding:10px; border:2px solid white;" src="{% static 'images/background/NS2.png' %}" alt="nurse-image" width="180"/>
+                     </div>
+                   </div>
+                </div>
+           </div>
+      </div>
+   </div>
+
+   <div class="container mt-1">
+        <h5  style="border-bottom:5px solid #115173; width:18%; padding:5px;">Benefits</h5>
+         <p style="font-family:sans-serif;" class="p-2">MAMU medics & physiotherapy  has a social responsibility to improve the health of future generations.
+          Guided by fundamental ethical principles of access and equity and in compliance with related laws 
+          and regulations, MAMU medics & physiotherapy will work with integrity in the pursuit of high quality
+          clinical services.
+         </p>
+   </div>
+
+   <div class="container mt-3">
+    <h5  style="border-bottom:5px solid #115173; width:18%; padding:5px;">Mission</h5>
+       <p style="font-family:sans-serif;" class="p-2">
+        Providing specialized care and treatment in equitable and timely manner
+        also  providing sustainable, effective and high quality medical services for patients as well as providing
+        conductive environment for training and research.
+       </p>
+   </div>
+
+   <div class="container mt-3">
+    <h5 style="border-bottom:5px solid #115173; width:18%; padding:5px;">Vision</h5>
+     <p style="font-family:sans-serif;" class="p-2">To become a centre of excellence in provision of specialist and highly specialised services in
+      medicine, medical training and research.To become a centre of excellence in provision of specialist and highly specialised services in
+      medicine, medical training and research.
+     </p>
+   </div>
+
+
+ {% endblock content %}

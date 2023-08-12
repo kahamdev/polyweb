@@ -1,0 +1,47 @@
+{% extends 'base/main.html' %}
+
+{% load static %}
+
+{% block title %} Departments {% endblock %}
+
+{% block content %}
+<style>
+   img.therapy-content-img{
+      width:50%;
+    }
+    @media screen and (max-width:768px) {
+       img.therapy-content-img{
+        width:100%;
+        margin:5px;
+       }
+    }
+    @media screen and (max-width:400px) {
+      img.therapy-content-img{
+        width:90%;
+    }
+   }
+</style>
+<div class="container">
+   <div class="therapy-content">
+     <h1 style="color:#115173;  border-bottom:2px solid #115173;" class="mt-3 p-1"> HOME BASED PHYSIOTHERAPY</h1>
+      <p style="font-family:sans-serif;">
+         The treatment is totally personal and individualized.
+          Home is the environment of security and emotional belonging that increases 
+          the level of effective involvement in recovery process.
+      </p>
+      <p style="font-family:sans-serif;">
+         It is of great help for those with mobility 
+         problems and long term conditions that affects mobility.
+      </p>
+      <p style="font-family:sans-serif;">
+         We Offer home visit physiotherapy service which can be especially helpful
+          if people are having difficulty 
+      with their day to day activities, suffering from balance problems and post-operative patients.
+      </p>
+      <p style="font-family:sans-serif;">We also manage various conditions which requires physiotherapy intervention.</p>
+      <img class="therapy-content-img" src="{% static 'images/image/HBC.png' %}" style=" height:400px;"alt="image"/>
+      <br>
+      <br>
+   </div>
+</div>
+{% endblock content %}

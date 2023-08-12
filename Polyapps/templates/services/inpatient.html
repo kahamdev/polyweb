@@ -1,0 +1,50 @@
+{% extends 'base/main.html' %}
+
+{% load static %}
+
+{% block title %} Inpatients {% endblock %}
+
+{% block content %}
+   <style>
+      .inpatient-content-progress{
+         background-color:#cccc;
+         height:200px;
+         padding:20px;
+         margin:10px;
+         color:#115733;
+      }
+      @media screen and (max-width:400px) {
+         .inpatient-content-progress{
+            height:260px;
+         }
+         .inpatient-content-progress h1{
+            font-size:28px;
+         }
+      }
+   </style>
+   <div class="container">
+      <div class="inpatient-content">
+         <h1 style="color:#115173;  border-bottom:2px solid #115173;" class="mt-3 p-1">Inpatients service</h1>     
+      <div class="inpatient-content-progress"> 
+      <h1>Inpatient page on progress..........................</h1>
+      <a  href="{% url 'homepage' %}" style="text-decoration:none; color:#115173;"><span style="font-size:25px;"> <- Return home </span></a>  
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+
+
+      </div>
+   </div>
+{% endblock content %}
